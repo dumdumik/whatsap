@@ -6,7 +6,15 @@ let app = new Vue({
         description: "A pair of warm, fuzzy socks",
         image: "./assets/vmSocks-green-onWhite.jpg",
         altText: "A pair of socks",
-        inStock: true,
+        variki: [
+            {
+                inStock: false,
+            },
+            {
+                inStock: true,
+            }
+        ],
+        inStock: false,
         link: "More products like this",
         OnSale: false,
         variants: [
@@ -37,6 +45,6 @@ let app = new Vue({
             } else {
                 alert("Бро, корзина и так пуста куда минусуешь");
             }
-        }
+        },
     }
 })
