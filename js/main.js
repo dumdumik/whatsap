@@ -8,5 +8,17 @@ let app = new Vue({
         altText: "A pair of socks",
         inStock: true,
         link: "More products like this",
+        OnSale: false,
+        variants: [
+            {
+                variantId: 2234,
+                variantColor: 'green'
+            },
+            {
+                variantId: 2235,
+                variantColor: 'blue'
+            }
+        ],
+        sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL']
     }
 })

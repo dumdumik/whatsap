@@ -11,25 +11,24 @@
     <title>Product App</title>
 </head>
 <body>
-
-
     <div id="app">
         <div class="product">
-
             <div class="product-image">
                 <img alt="#" :src="image" :alt="altText"/>
             </div>
-
             <div class="product-info">
                 <h1>{{ product }}</h1>
                 <p>{{description}}</p>
                 <a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks">{{link}}</a>
+                <p v-if="inStock">In Stock</p>
+                <p v-else>Out of Stock</p>
+                <span v-if="OnSale">On Sale</span>
+                <div v-for="variant in variants" :key="variant.variantId">
+                    <p>{{ variant.variantColor }}</p>
+                </div>
+                <li v-for="size in sizes">{{size}}</li>
             </div>
-
         </div>
     </div>
-
-
-
 </body>
 </html>
