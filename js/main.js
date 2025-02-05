@@ -3,20 +3,13 @@ let app = new Vue({
     el: '#app',
     data: {
         product: "Socks",
+        brand: 'Vue Mastery',
         description: "A pair of warm, fuzzy socks",
         image: "./assets/vmSocks-green-onWhite.jpg",
         altText: "A pair of socks",
-        variki: [
-            {
-                inStock: false,
-            },
-            {
-                inStock: true,
-            }
-        ],
         inStock: false,
         link: "More products like this",
-        OnSale: false,
+        onSale: true,
         variants: [
             {
                 variantId: 2234,
@@ -46,5 +39,14 @@ let app = new Vue({
                 alert("Бро, корзина и так пуста куда минусуешь");
             }
         },
-    }
+    },
+    computed: {
+        title() {
+            return this.brand + ' ' + this.product;
+        },
+        sale() {
+            return this.onSale ? `${this.brand} ${this.product} is on sale!` : `${this.brand} ${this.product} is not on sale.`;
+        }
+    },
+
 })
