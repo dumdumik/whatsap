@@ -249,6 +249,7 @@ Vue.component('product', {
                     variantId: 2235,
                     variantColor: 'blue',
                     variantImage: "./assets/vmSocks-blue-onWhite.jpg",
+
                     variantQuantity: 10,
                     basePrice: 19,
                     materials: [
